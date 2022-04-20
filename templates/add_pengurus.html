@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/9f23f71497.js" crossorigin="anonymous"></script>
+  <title>2001521 - Surya Alfin Maoludin | Tugas Pratikum 2</title>
+</head>
+<body style="background-color:whitesmoke;">
+    <div class="container">
+        <nav class="menu">
+          <button aria-expanded="false" class="humberger-menu">
+            <span class="open">☰</span>
+            <span class="close">×</span>
+            Menu
+          </button>
+          <ul id="menu-list" >
+            <li>
+                <a href="index.php">Home</a>
+              </li>
+              <li>
+                <a href="divisi.php">Divisi</a>
+              </li>
+              <li>
+                <a href="bidang_divisii.php">Bidang Divisi</a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="container" style="padding: 10px; border: 1px solid #3e3e3e;">
+      <form action="" method="post" enctype="multipart/form-data">
+      
+        <h1 style="text-align: center; margin: 10px; font-size: 35px;">Data Pengurus</h1>
+        <input type="hidden" name="key" value="">
+        <div class="form-group">
+            <label for="exampleInputEmail1">NIM<br></label>
+            <input type="number" class="form-control" name="nim" placeholder="Masukkan NIM" value="NIM_"required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1"><br>Nama<br></label>
+            <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Pengurus" value="Nama_" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1"><br>Semester<br></label>
+            <input type="text" class="form-control" name="semester" value="Semester_" placeholder="Masukkan Semester">
+        </div>
+      <div class="form-group">
+          <label for="exampleInputEmail1"><br>Jabatan<br></label>
+          <select class="form-control" id="jabatan_divisi" name="jabatan_divisi">
+            D_Jabatan
+          </select>
+      </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1"><br>Foto<br></label>
+            <input type="file" class="form-control" name="foto" id="img" value="">
+        </div>
+        <button type="Submit" class="btn btn-primary" name="submit" id="submit"style="margin-top: 10px;">Submit</button>
+        <a href="index.php"><button type="button" class="btn btn-danger" name="cancel" style="margin-top: 10px;">Cancel</button></a>
+    </form>
+
+    </div>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</body>
+
+
+</html>

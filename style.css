@@ -1,0 +1,122 @@
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+ 
+
+/* Styling tulisan */
+
+i{
+  font-size: 35px;
+  color: black;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+body {
+  background-color: #f0f0f0;
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+}
+
+
+
+.menu-list {
+  background-color: grey;
+}
+
+.menu ul {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.menu a {
+  background: #fff;
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.menu a:hover {
+  font-weight: bold;
+}
+
+.humberger-menu {
+  background: #fff;
+  border: 0;
+  padding: 10px 20px;
+  display: none;
+}
+
+/* Media Query */
+
+@media (max-width: 1000px) {
+  .menu {
+    perspective: 800px;
+  }
+
+  .humberger-menu {
+    font-size: 1em;
+  }
+
+  .menu a {
+    font-size: 1em;
+  }
+
+  .humberger-menu {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .menu ul {
+    max-height: 0;
+    overflow: hidden;
+    transform: rotateX(90deg);
+    transition: all 0.5s;
+  }
+
+  [aria-expanded="true"] ~ ul {
+    display: grid;
+    max-height: 500px;
+    transform: rotateX(0);
+  }
+
+  [aria-expanded="false"] .close {
+    display: none;
+  }
+
+  [aria-expanded="true"] .close {
+    display: inline-block;
+  }
+
+  [aria-expanded="true"] .open {
+    display: none;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .menu ul {
+    grid-template-columns: 1fr;
+  }
+}
